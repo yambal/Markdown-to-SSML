@@ -3,6 +3,6 @@ import { renderer } from './renderer'
 
 export const parse = (md: string): string => {
   marked.use({ renderer })
-  const ssml = marked(md)
+  const ssml = `<speak>${marked(md)}</speak>`
   return ssml
 }
